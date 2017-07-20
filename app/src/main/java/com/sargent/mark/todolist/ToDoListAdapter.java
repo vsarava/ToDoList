@@ -3,6 +3,8 @@ package com.sargent.mark.todolist;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteTransactionListener;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,6 +27,7 @@ public class ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemHo
 
     private Cursor cursor;
     private ItemClickListener listener;
+    private SQLiteDatabase db;
     private String TAG = "todolistadapter";
 
     @Override
@@ -52,9 +55,10 @@ public class ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemHo
         void onItemClick(int pos, String description, String duedate, long id, String category);
     }
 
-    public ToDoListAdapter(Cursor cursor, ItemClickListener listener) {
+    public ToDoListAdapter(Cursor cursor, ItemClickListener listener, SQLiteDatabase db) {
         this.cursor = cursor;
         this.listener = listener;
+        this.db = db;
     }
 
     public void swapCursor(Cursor newCursor){
@@ -105,6 +109,17 @@ public class ToDoListAdapter extends RecyclerView.Adapter<ToDoListAdapter.ItemHo
             categ.setText(category);
             holder.itemView.setTag(id);
             checkbox.setChecked(check);
+
+            //Tracking the changes in checkbox
+            checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    boolean checked = checkbox.isChecked();
+                    ContentValues cv = new ContentValues();
+                    cv.put(Contract.TABLE_TODO.COLUMN_NAME_CHECK,checked);
+                    db.update(Contract.TABLE_TODO.TABLE_NAME,cv,Contract.TABLE_TODO._ID + "=" + id,null);
+                }
+            });
         }
 
         @Override

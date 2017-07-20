@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements AddToDoFragment.O
                 UpdateToDoFragment frag = UpdateToDoFragment.newInstance(year, month, day, description, id, category);
                 frag.show(fm, "updatetodofragment");
             }
-        });
+        },db);
 
         rv.setAdapter(adapter);
 
@@ -206,6 +206,7 @@ public class MainActivity extends AppCompatActivity implements AddToDoFragment.O
         return true;
     }
 
+    /*
     //Tracking the changes in checkbox
     public void onCheckboxClicked(View view) {
         boolean checked = ((CheckBox) view).isChecked();
@@ -213,7 +214,7 @@ public class MainActivity extends AppCompatActivity implements AddToDoFragment.O
         cv.put(Contract.TABLE_TODO.COLUMN_NAME_CHECK,checked);
         //db.update(Contract.TABLE_TODO.TABLE_NAME,cv,Contract.TABLE_TODO._ID + "=" + id,null);
     }
-
+    */
 
     //Modifying the recycler view based on the menu item
     @Override

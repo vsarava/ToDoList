@@ -33,11 +33,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sargent/mark/todolist/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="216" column="6" selection-start-line="216" selection-start-column="6" selection-end-line="216" selection-end-column="6" />
+            <state relative-caret-position="157">
+              <caret line="208" column="4" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="4" />
               <folding>
                 <element signature="e#2422#3204#0" expanded="true" />
                 <element signature="e#3203#3204#0" expanded="true" />
@@ -46,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToDoListAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ToDoListAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sargent/mark/todolist/ToDoListAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="229">
@@ -2657,17 +2657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sargent/mark/todolist/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="216" column="6" selection-start-line="216" selection-start-column="6" selection-end-line="216" selection-end-column="6" />
-          <folding>
-            <element signature="e#2422#3204#0" expanded="true" />
-            <element signature="e#3203#3204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sargent/mark/todolist/ToDoListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
@@ -2675,6 +2664,17 @@
           <folding>
             <element signature="e#3732#4230#0" expanded="true" />
             <element signature="e#4229#4230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sargent/mark/todolist/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="208" column="4" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="4" />
+          <folding>
+            <element signature="e#2422#3204#0" expanded="true" />
+            <element signature="e#3203#3204#0" expanded="true" />
           </folding>
         </state>
       </provider>

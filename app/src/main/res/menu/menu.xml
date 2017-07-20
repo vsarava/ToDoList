@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+        <item android:id="@+id/All"
+            android:title="All" />
+        <item android:id="@+id/Class"
+            android:title="Class" />
+        <item android:id="@+id/Project"
+            android:title="Project" />
+        <item android:id="@+id/Assignment"
+            android:title="Assignment" />
+        <item android:id="@+id/Quiz"
+            android:title="Quiz" />
+</menu>
